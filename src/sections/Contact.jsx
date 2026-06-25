@@ -80,9 +80,9 @@ export default function Contact() {
 
         // control
         const controls = new OrbitControls(camera, canvas);
-        controls.enableDamping = true;
+        controls.enableRotate = false;
+        controls.enablePan = false;
         controls.enableZoom = false;
-
         // Renderer
         const renderer = new THREE.WebGLRenderer({
             canvas: canvas,
@@ -165,10 +165,10 @@ export default function Contact() {
 
                 <canvas
                     ref={canvasRef}
-
+                    className="absolute inset-0 w-full h-full"
                 />
 
-                <div className="absolute top-0  z-10 flex min-h-screen items-center px-4 sm:px-6 md:px-10 lg:px-16">
+                <div className="absolute top-0 w-full z-10 flex min-h-screen items-center px-4 sm:px-6 md:px-10 lg:px-16">
 
                     <div
                         className="

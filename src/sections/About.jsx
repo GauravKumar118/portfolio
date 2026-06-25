@@ -7,12 +7,16 @@ import Footer from "../Component/Footer"
 
 
 import * as THREE from "three";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 
 export default function About() {
+
+    const modelRef = useRef(null);
+    const targetRotation = useRef(0);
+
     const canvasRef = useRef();
 
     useEffect(() => {
@@ -36,6 +40,7 @@ export default function About() {
         const loader = new GLTFLoader();
         loader.load("/computer_and_laptop.glb", (gltf) => {
             model = gltf.scene;
+            modelRef.current = model;
             scene.add(model);
 
             const updateModel = () => {
@@ -96,7 +101,9 @@ export default function About() {
         // control
         const controls = new OrbitControls(camera, canvas);
         controls.enableDamping = true;
-        controls.enableZoom = false;
+        controls.enableRotate = false; // mouse se rotate band
+        controls.enableZoom = false;   // zoom band
+        controls.enablePan = false;    // move band
 
 
         // Renderer
@@ -122,8 +129,20 @@ export default function About() {
         const clock = new THREE.Clock();
 
         const animate = () => {
-            const elapsedTime =
-                clock.getElapsedTime();
+            const elapsedTime = clock.getElapsedTime();
+            if (
+                modelRef.current &&
+                modelRef.current.userData.rotate
+            ) {
+                modelRef.current.rotation.y += 0.01;
+
+            }
+
+            controls.update();
+            if (modelRef.current) {
+                modelRef.current.rotation.y +=
+                    (targetRotation.current - modelRef.current.rotation.y) * 0.05;
+            }
 
             renderer.render(scene, camera);
             requestAnimationFrame(animate);
@@ -156,32 +175,45 @@ export default function About() {
         };
 
 
+
+
     }, []);
 
 
     return (
         <>
 
-            <section className="relative top-0 w-full h-screen bg-cover bg-center bg-no-repeat  font-serif  overflow-hidden text-gray-400"
+            <section className="relative top-0 w-full bg-cover bg-center bg-no-repeat  font-serif  overflow-hidden text-gray-400 "
                 style={{
                     backgroundImage: "url('/about.png')",
                 }}>
                 <Navbar />
                 <canvas ref={canvasRef} />
 
-                <div className="absolute top-20 left-5   w-[85%] md:w-[70%] lg:w-[70%]   overflow-hidden ">
+                <div className="absolute top-20 left-5    w-[85%] sm:w-[80%] md:w-[70%] lg:w-[70%]   overflow-hidden ">
                     <p className="text-5xl   md:text-5xl lg:text-7xl">Hi I'm<span className=" ml-1 text-violet-500"><b>Gaurav Saini</b></span> </p>
                     <p className=" text-sm md:text-base lg:text-lg  font-sans ">I build fast, responsive, and visually engaging web applications.From powerful MERN Stack backends to interactive Three.js scenes and smooth GSAP animations, I love turning ideas into digital experiences.</p>
 
                 </div>
+                <button
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 z-[9999]
+               w-8 h-8 rounded-full bg-violet-200 animate-pulse
+               shadow-[0_0_20px_#8b5cf6]"
+                    onMouseEnter={() => {
+                        targetRotation.current = Math.PI / 0.50; // side view
+                    }}
+                    onMouseLeave={() => {
+                        targetRotation.current = 0; // original position
+                    }}
+                />
 
 
             </section>
-
+            {/* 
             <Service />
             <Experience />
             < Skill />
-            <Footer />
+            <Footer /> */}
 
 
 

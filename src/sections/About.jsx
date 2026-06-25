@@ -8,7 +8,7 @@ import Footer from "../Component/Footer"
 
 import * as THREE from "three";
 import { useEffect, useRef, useState } from "react";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 
@@ -98,12 +98,6 @@ export default function About() {
         fillLight.position.set(-10, -30, 50);
         scene.add(fillLight);
 
-        // control
-        const controls = new OrbitControls(camera, canvas);
-        controls.enableDamping = true;
-        controls.enableRotate = false; // mouse se rotate band
-        controls.enableZoom = false;   // zoom band
-        controls.enablePan = false;    // move band
 
 
         // Renderer
@@ -138,7 +132,7 @@ export default function About() {
 
             }
 
-            controls.update();
+
             if (modelRef.current) {
                 modelRef.current.rotation.y +=
                     (targetRotation.current - modelRef.current.rotation.y) * 0.05;
@@ -209,7 +203,7 @@ export default function About() {
 
 
             </section>
-            
+
             <Service />
             <Experience />
             < Skill />

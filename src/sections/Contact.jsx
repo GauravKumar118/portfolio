@@ -4,7 +4,7 @@ import Footer from "../Component/Footer"
 
 import * as THREE from "three";
 import { useEffect, useRef } from "react";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+
 
 export default function Contact() {
     const canvasRef = useRef();
@@ -78,12 +78,6 @@ export default function Contact() {
 
         scene.add(stars);
 
-        // control
-        const controls = new OrbitControls(camera, canvas);
-        controls.enableRotate = false;
-        controls.enablePan = false;
-        controls.enableZoom = false;
-        controls.enableDamping = true;
 
 
         // Renderer
@@ -146,7 +140,7 @@ export default function Contact() {
             sphere.rotation.x += 0.012;
             stars.rotation.y = elapsedTime * 0.20;
 
-            controls.update();
+
 
             renderer.render(scene, camera);
             requestAnimationFrame(animate);

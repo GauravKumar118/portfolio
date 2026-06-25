@@ -39,7 +39,7 @@ export default function Footer() {
 
 
     return (
-        <footer className=" footer bg-black text-white  overflow-hidden">
+        <footer className="relative top-0 footer bg-black text-white  overflow-hidden">
             <div className="max-w-7xl mx-auto border border-violet-500/30 rounded-[30px] p-8  relative">
 
                 {/* Top Glow */}

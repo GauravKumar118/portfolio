@@ -37,22 +37,22 @@ export default function Skill() {
 
 
         // 1000084091.jpg के अनुसार Horizontal Ring का रेडियस
-        let radiusX = 5;
-        let radiusZ = 5;
-        let cameraZ = 13;
+        let radiusX = 8.5;
+        let radiusZ = 8.5;
+        let cameraZ = 15;
 
         if (window.innerWidth < 640) {
-            radiusX = 3.5;
-            radiusZ = 3.5;
-            cameraZ = 16;
+            radiusX = 5.5;
+            radiusZ = 5.5;
+            cameraZ = 20;
         } else if (window.innerWidth < 768) {
-            radiusX = 5;
-            radiusZ = 5;
-            cameraZ = 14;
+            radiusX = 6.5;
+            radiusZ = 6.5;
+            cameraZ = 19;
         } else if (window.innerWidth <= 1024) {
-            radiusX = 5;
-            radiusZ = 5;
-            cameraZ = 13;
+            radiusX = 7.5;
+            radiusZ = 7.5;
+            cameraZ = 18;
         }
 
         const planesArray = [];

@@ -212,7 +212,7 @@ export default function About() {
             
             <Service />
             <Experience />
-            < Skill />
+            {/* < Skill /> */}
             <Footer />
 
 

@@ -7,8 +7,7 @@ import Footer from "../Component/Footer"
 
 
 import * as THREE from "three";
-import { useEffect, useRef, useState } from "react";
-
+import { useEffect, useRef } from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 
@@ -35,7 +34,7 @@ export default function About() {
 
 
 
-        let mixer;
+
         let model;
         const loader = new GLTFLoader();
         loader.load("/computer_and_laptop.glb", (gltf) => {
@@ -60,7 +59,7 @@ export default function About() {
                     camera.position.z = 80;
                 }
                 else {
-                    model.scale.set(1, 1, 1);
+                    model.scale.set(0.7, 0.7, 0.7);
                     model.position.set(0, -25, 0);
                     camera.position.z = 90;
                 }
@@ -89,7 +88,7 @@ export default function About() {
         scene.add(light);
 
         // Main light (front + upar se)
-        const dirLight = new THREE.DirectionalLight(0xffffff, -1);
+        const dirLight = new THREE.DirectionalLight(0xffffff, 1);
         dirLight.position.set(5, 5, 5); // balanced angle
         scene.add(dirLight);
 
@@ -100,23 +99,15 @@ export default function About() {
 
 
 
+
         // Renderer
         const renderer = new THREE.WebGLRenderer({
             canvas: canvas,
             antialias: true,
             alpha: true,
+
         });
-        renderer.setSize(width, height);
-        renderer.setPixelRatio(
-            Math.min(window.devicePixelRatio, 10)
-        );
-        renderer.outputColorSpace =
-            THREE.SRGBColorSpace;
 
-        renderer.toneMapping =
-            THREE.ACESFilmicToneMapping;
-
-        renderer.toneMappingExposure = 1.5;
 
 
         //animation
@@ -162,6 +153,7 @@ export default function About() {
         };
 
         window.addEventListener("resize", handleResize);
+        handleResize();
 
 
         return () => {

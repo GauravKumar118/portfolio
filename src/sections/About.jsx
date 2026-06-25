@@ -209,11 +209,11 @@ export default function About() {
 
 
             </section>
-            {/* 
+            
             <Service />
             <Experience />
             < Skill />
-            <Footer /> */}
+            <Footer />
 
 
 

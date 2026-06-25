@@ -8,7 +8,7 @@ export default function Experience() {
             {/* line */}
             <section className="relative py-10 justify-items-center overflow-hidden w-full">
                 {/* 1 */}
-                <div className=" w-full justify-items-center ">
+                <div className=" justify-items-center ">
                     <div className="w-px h-5 bg-black md:bg-white lg:bg-white" />                    
                     <img src="/icon/react.svg" className="w-[40px] h-[40px]  border  border-white rounded-full" />
 

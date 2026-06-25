@@ -110,13 +110,13 @@ export default function Contact() {
             }
             else if (width < 768) {
                 sphere.scale.set(0.8, 0.8, 0.8);
-                sphere.position.set(14, 0, 0);
-                camera.position.z = 65;
+                sphere.position.set(13, 0, 0);
+                camera.position.z = 55;
             }
             else if (width <= 1024) {
                 sphere.scale.set(0.8, 0.8, 0.8);
-                sphere.position.set(16, 0, 0);
-                camera.position.z = 60;
+                sphere.position.set(15, 0, 0);
+                camera.position.z = 57;
             }
             else {
                 sphere.scale.set(1, 1, 1);
@@ -173,7 +173,7 @@ export default function Contact() {
                     <div
                         className="
                     w-full
-                    sm:w-[55%]
+                    sm:w-[100%]
                     md:w-[400px]
                     lg:w-[500px]                    
                     font-serif

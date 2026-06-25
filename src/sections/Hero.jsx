@@ -338,7 +338,7 @@ export default function Hero() {
 
             </div>
 
-            <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 ">
+            <div className="fixed bottom-2 left-1/2 -translate-x-1/2 z-50 ">
                 <Link to='/About' className=" border-b border-t border-violet-600/70 px-3 py-2  backdrop-blur-[3px]  rounded-full pointer-events-auto  ">View Portfolio <i class="fa-solid fa-arrow-right text-violet-600/70  "></i> </Link>
             </div>
 

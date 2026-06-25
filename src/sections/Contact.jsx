@@ -83,7 +83,7 @@ export default function Contact() {
         controls.enableRotate = false;
         controls.enablePan = false;
         controls.enableZoom = false;
-        
+
         // Renderer
         const renderer = new THREE.WebGLRenderer({
             canvas: canvas,
@@ -143,8 +143,8 @@ export default function Contact() {
             sphere.rotation.y += 0.012;
             sphere.rotation.x += 0.012;
             stars.rotation.y = elapsedTime * 0.20;
-            
 
+            controls.update();
 
             renderer.render(scene, camera);
             requestAnimationFrame(animate);

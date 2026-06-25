@@ -113,7 +113,7 @@ export default function Skill() {
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
         controls.enableZoom = false; // स्क्रोल पर पेज न हिले इसलिए ज़ूम बंद किया है
-        controls.enablePan = false;  
+        controls.enablePan = false;
 
         // Resize Handler
         const handleResize = () => {
@@ -131,6 +131,7 @@ export default function Skill() {
 
             // रिंग को धीरे-धीरे रोटेट करना
             group.rotation.y += 0.005;
+            controls.update();
 
             // Billboard Effect: हर लोगो हमेशा कैमरे के सामने सीधा मुँह करके रहेगा
             planesArray.forEach((plane) => {

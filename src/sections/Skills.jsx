@@ -42,17 +42,17 @@ export default function Skill() {
         let cameraZ = 15;
 
         if (window.innerWidth < 640) {
-            radiusX = 5.5;
-            radiusZ = 5.5;
-            cameraZ = 20;
+            radiusX = 5;
+            radiusZ = 5;
+            cameraZ = 23;
         } else if (window.innerWidth < 768) {
-            radiusX = 6.5;
-            radiusZ = 6.5;
-            cameraZ = 19;
-        } else if (window.innerWidth <= 1024) {
-            radiusX = 7.5;
-            radiusZ = 7.5;
+            radiusX = 6;
+            radiusZ = 6;
             cameraZ = 18;
+        } else if (window.innerWidth <= 1024) {
+            radiusX = 7;
+            radiusZ = 7;
+            cameraZ = 17;
         }
 
         const planesArray = [];
@@ -113,6 +113,7 @@ export default function Skill() {
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
         controls.enableZoom = false; // स्क्रोल पर पेज न हिले इसलिए ज़ूम बंद किया है
+        controls.enablePan = false;  
 
         // Resize Handler
         const handleResize = () => {
@@ -136,7 +137,6 @@ export default function Skill() {
                 plane.lookAt(camera.position);
             });
 
-            controls.update();
             renderer.render(scene, camera);
         };
 
@@ -150,7 +150,7 @@ export default function Skill() {
 
     return (
         <section className="relative top-0 w-full h-screen overflow-hidden bg-black font-sans">
-            <canvas ref={canvasRef}/>
+            <canvas ref={canvasRef} />
             <div className="absolute top-10  w-full text-center text-white  ">
                 <h1 className="text-violet-500 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif ">Skills</h1>
 

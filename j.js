@@ -1,8 +1,8 @@
-<a
-    href="https://github.com/gauravsaini"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-4xl"
->
-    <i className="fa-brands fa-github"></i>
-</a>
+       const handleResize = () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            renderer.setSize(width, height);
+        };
+        window.addEventListener("resize", handleResize);

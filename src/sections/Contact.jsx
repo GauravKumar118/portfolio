@@ -83,6 +83,8 @@ export default function Contact() {
         controls.enableRotate = false;
         controls.enablePan = false;
         controls.enableZoom = false;
+        controls.enableDamping = true;
+
 
         // Renderer
         const renderer = new THREE.WebGLRenderer({
@@ -91,7 +93,7 @@ export default function Contact() {
             alpha: true,
 
         });
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setSize(width, height);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 
@@ -151,7 +153,15 @@ export default function Contact() {
         };
 
         animate();
+        return () => {
+            window.removeEventListener("resize", handleResize);
 
+            geometry.dispose();
+            material.dispose();
+            texture.dispose();
+
+            renderer.dispose();
+        };
 
 
     }, []);

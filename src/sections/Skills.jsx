@@ -112,18 +112,69 @@ export default function Skill() {
         // Controls
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
-        controls.enableZoom = false; // स्क्रोल पर पेज न हिले इसलिए ज़ूम बंद किया है
+        controls.enableZoom = false;           // स्क्रोल पर पेज न हिले इसलिए ज़ूम बंद किया है
         controls.enablePan = false;
 
         // Resize Handler
         const handleResize = () => {
             width = window.innerWidth;
             height = window.innerHeight;
+
+            if (width < 640) {
+                radiusX = 5;
+                radiusZ = 5;
+                camera.position.z = 23;
+            } else if (width < 768) {
+                radiusX = 6;
+                radiusZ = 6;
+                camera.position.z = 18;
+            } else if (width <= 1024) {
+                radiusX = 7;
+                radiusZ = 7;
+                camera.position.z = 17;
+            } else {
+                radiusX = 8.5;
+                radiusZ = 8.5;
+                camera.position.z = 15;
+            }
+
+            planesArray.forEach((plane, index) => {
+                const angle = (index / skills.length) * Math.PI * 2;
+
+                plane.position.x = Math.cos(angle) * radiusX;
+                plane.position.z = Math.sin(angle) * radiusZ;
+            });
+
             camera.aspect = width / height;
             camera.updateProjectionMatrix();
+
             renderer.setSize(width, height);
+
+
+
+            const ringPositions = [];
+
+            for (let i = 0; i <= 64; i++) {
+                const theta = (i / 64) * Math.PI * 2;
+
+                ringPositions.push(
+                    new THREE.Vector3(
+                        Math.cos(theta) * radiusX,
+                        0,
+                        Math.sin(theta) * radiusZ
+                    )
+                );
+            }
+
+            baseRing.geometry.dispose();
+            baseRing.geometry = new THREE.BufferGeometry().setFromPoints(ringPositions);
+
+
+
         };
         window.addEventListener("resize", handleResize);
+        handleResize();
+
 
         // Animation Loop
         const animate = () => {
@@ -151,7 +202,10 @@ export default function Skill() {
 
     return (
         <section className="relative top-0 w-full h-screen overflow-hidden bg-black font-sans">
-            <canvas ref={canvasRef} />
+            <canvas
+                ref={canvasRef}
+                className="w-full h-full block"
+            />
             <div className="absolute top-10  w-full text-center text-white  ">
                 <h1 className="text-violet-500 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif ">Skills</h1>
 

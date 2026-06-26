@@ -4,45 +4,38 @@ export default function Projects() {
     const projects = [
         {
             id: 1,
-            title: "3D Portfolio",
-            image: "https://static.vecteezy.com/system/resources/previews/025/054/788/non_2x/vibrant-colors-and-messy-brush-strokes-create-abstract-painted-image-generated-by-ai-free-photo.jpg",
-            description: "Modern portfolio built with React, Three.js and GSAP.",
-            live: "#",
-            github: "#",
+            title: "Basque Hospitality Website",
+            image: "/project/basque.png",
+            description: "A modern and responsive restaurant website featuring online reservations, event booking, interactive navigation and an elegant user experience.",
+            live: "https://basquedehradun.com/",
+
         },
         {
             id: 2,
-            title: "E-Commerce App",
-            image: "https://png.pngtree.com/thumb_back/fh260/background/20241007/pngtree-color-wheel-showcasing-the-spectrum-of-hues-essential-for-artists-designers-image_16314134.jpg",
-            description: "Full-stack MERN e-commerce application.",
-            live: "#",
-            github: "#",
+            title: "Manufacturing Management Dashboard",
+            image: "/project/ProFactory.png",
+            description: "Interactive manufacturing dashboard with production insights, inventory control, analytics and responsive design for efficient business management.",
+            live: "https://manufacturingerp.netlify.app/",
+
         },
         {
             id: 3,
-            title: "Task Manager",
-            image: "https://tse4.mm.bing.net/th/id/OIP.gUsRCFAxksW3FSd4QSy3qQHaEK?r=0&w=1920&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3",
-            description: "Task management app with authentication.",
-            live: "#",
-            github: "#",
+            title: "Nexa Care Healthcare Website",
+            image: "/project/nexa.png",
+            description: "A modern and responsive healthcare website featuring medical services, doctor information, appointment sections and a clean user experience.",
+            live: "https://nexa-caree.netlify.app/",
+
         },
 
         {
-            id: 3,
-            title: "E-Commerce App",
-            image: "https://png.pngtree.com/thumb_back/fh260/background/20241007/pngtree-color-wheel-showcasing-the-spectrum-of-hues-essential-for-artists-designers-image_16314134.jpg",
-            description: "Full-stack MERN e-commerce application.",
-            live: "#",
-            github: "#",
+            id: 4,
+            title: "Restro Takeaway Website",
+            image: "/project/restrot.png",
+            description: "A modern and responsive restaurant website featuring online food ordering, takeaway services, menu showcase and an intuitive user experience.",
+            live: "https://restrotakeaway.netlify.app/",
+
         },
-        {
-            id: 5,
-            title: "Task Manager",
-            image: "https://tse4.mm.bing.net/th/id/OIP.gUsRCFAxksW3FSd4QSy3qQHaEK?r=0&w=1920&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3",
-            description: "Task management app with authentication.",
-            live: "#",
-            github: "#",
-        },
+
     ];
     return (
         <>
@@ -89,17 +82,13 @@ export default function Projects() {
                                 <div className="mt-auto flex flex-col sm:flex-row justify-center gap-4">
                                     <a
                                         href={project.live}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className=" w-full sm:w-auto text-center bg-[#0f2747] hover:bg-[#15335d] px-6 py-3 rounded-full border border-slate-600"
                                     >
                                         Visit Site
                                     </a>
 
-                                    <a
-                                        href={project.github}
-                                        className="w-full sm:w-auto text-center bg-[#0f2747] hover:bg-[#15335d] px-6 py-3 rounded-full border border-slate-600"
-                                    >
-                                        Source Code
-                                    </a>
                                 </div>
                             </div>
                         </div>

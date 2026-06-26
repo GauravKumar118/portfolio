@@ -4,7 +4,7 @@ export default function Projects() {
     const projects = [
         {
             id: 1,
-            title: "Basque Hospitality Website",
+            title: "Restaurant Landing Page",
             image: "/project/basque.png",
             description: "A modern and responsive restaurant website featuring online reservations, event booking, interactive navigation and an elegant user experience.",
             live: "https://basquedehradun.com/",
@@ -12,7 +12,7 @@ export default function Projects() {
         },
         {
             id: 2,
-            title: "Manufacturing Management Dashboard",
+            title: "Manufacturing ERP",
             image: "/project/ProFactory.png",
             description: "Interactive manufacturing dashboard with production insights, inventory control, analytics and responsive design for efficient business management.",
             live: "https://manufacturingerp.netlify.app/",
@@ -30,12 +30,12 @@ export default function Projects() {
         {
             id: 4,
             title: "Restro Takeaway Website",
-            image: "/project/restrot.png",
+            image: "/project/rest.jpeg",
             description: "A modern and responsive restaurant website featuring online food ordering, takeaway services, menu showcase and an intuitive user experience.",
             live: "https://restrotakeaway.netlify.app/",
 
         },
-
+        
     ];
     return (
         <>
@@ -65,7 +65,7 @@ export default function Projects() {
                             <div className="p-3">
                                 <img
                                     src={project.image}
-                                    alt={project.title}
+                                    alt={project.title}                                    
                                     className="w-full h-48 sm:h-56 lg:h-60 object-cover rounded-2xl"
                                 />
                             </div>

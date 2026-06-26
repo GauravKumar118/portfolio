@@ -4,7 +4,7 @@ export default function Projects() {
     const projects = [
         {
             id: 1,
-            title: "Restaurant Landing Page",
+            title: "Basque Restaurant",
             image: "/project/basque.png",
             description: "A modern and responsive restaurant website featuring online reservations, event booking, interactive navigation and an elegant user experience.",
             live: "https://basquedehradun.com/",
@@ -20,7 +20,7 @@ export default function Projects() {
         },
         {
             id: 3,
-            title: "Nexa Care Healthcare Website",
+            title: "Nexa Care Healthcare",
             image: "/project/nexa.png",
             description: "A modern and responsive healthcare website featuring medical services, doctor information, appointment sections and a clean user experience.",
             live: "https://nexa-caree.netlify.app/",
@@ -29,7 +29,7 @@ export default function Projects() {
 
         {
             id: 4,
-            title: "Restro Takeaway Website",
+            title: "Restro Takeaway",
             image: "/project/rest.jpeg",
             description: "A modern and responsive restaurant website featuring online food ordering, takeaway services, menu showcase and an intuitive user experience.",
             live: "https://restrotakeaway.netlify.app/",

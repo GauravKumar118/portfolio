@@ -86,7 +86,7 @@ export default function Projects() {
                                         rel="noopener noreferrer"
                                         className=" w-full sm:w-auto text-center bg-[#0f2747] hover:bg-[#15335d] px-6 py-3 rounded-full border border-slate-600"
                                     >
-                                        Visit Site
+                                        <i class="fa-solid fa-eye"></i> Visit Site 
                                     </a>
 
                                 </div>

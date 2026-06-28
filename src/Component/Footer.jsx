@@ -90,7 +90,7 @@ export default function Footer() {
 
                     <div className="w-22  border border-violet-500/20 rounded-2xl p-1 text-center hover:border-violet-500 ">
                         <a
-                            href="mailto:gauravsainiup12@gmail.com"
+                            href="mailto:gauravsaini.deve@gmail.com"
                             className="text-4xl"><i class="fa-regular fa-envelope"></i>
                             <h2 className="mt-1 text-xl">Email</h2>
                         </a>

@@ -1,9 +1,13 @@
 import { Link } from "react-router";
 
+
+
 export default function Navbar() {
+
+
     return (
         <section className=" font-sans fixed top-0 left-0 w-full h-10  px-4 sm:px-6 md:px-8 lg:px-8 text-white bg-black/50 font-semibold z-50 overflow-hidden object-cover">
-            <div className="flex justify-between items-center ">
+            <div className=" flex justify-between items-center ">
 
                 {/* Left Side */}
                 <Link to="/">

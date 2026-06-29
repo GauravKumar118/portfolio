@@ -98,7 +98,7 @@ export default function Footer() {
                     </div>
                     <div className="w-22  border border-violet-500/20 rounded-2xl p-1 text-center hover:border-violet-500 overflow-hidden">
                         <a
-                            href="mailto:gauravsaini.deve@gmail.com"
+                            href="https://www.instagram.com/gaurav__dev/"
                             className="text-4xl"><i class="fa-brands fa-instagram"></i>
                             <h2 className="mt-1 text-xl">IG</h2>
                         </a>

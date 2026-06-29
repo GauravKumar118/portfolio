@@ -105,17 +105,6 @@ export default function Footer() {
 
                     </div>
 
-                    {/* <div className="w-22  border border-violet-500/20 rounded-2xl p-1 text-center hover:border-violet-500 ">
-                        <a
-                            href="/resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-4xl"
-                        >📄<h2 className="mt-1 text-xl">Resume</h2>
-                        </a>
-
-                    </div> */}
-
                 </div>
 
                 {/* Divider */}

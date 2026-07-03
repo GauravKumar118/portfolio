@@ -79,7 +79,7 @@ export default function Footer() {
 
                     <div className=" w-22  border border-violet-500/20 rounded-2xl p-1 text-center hover:border-violet-500 ">
                         <a
-                            href="https://www.linkedin.com/in/gaurav-kumar-a28117289/"
+                            href="https://www.linkedin.com/in/gaurav-saini-a28117289/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-4xl"><i class="fa-brands fa-linkedin-in"></i>

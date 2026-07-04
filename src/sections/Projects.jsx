@@ -35,7 +35,14 @@ export default function Projects() {
             live: "https://restrotakeaway.netlify.app/",
 
         },
-        
+
+        {
+            id: 5,
+            title: "Flyward",
+            image: "/project/flyward.png",
+            description: "A modern aviation finance platform that helps airlines, lessors, financiers, and investors analyze aircraft maintenance costs, forecast cash flows, evaluate transactions, and make data-driven financial decisions through an intuitive and responsive interface.",
+            live: "https://www.flyward.com/",
+        }
     ];
     return (
         <>
@@ -65,7 +72,7 @@ export default function Projects() {
                             <div className="p-3">
                                 <img
                                     src={project.image}
-                                    alt={project.title}                                    
+                                    alt={project.title}
                                     className="w-full h-48 sm:h-56 lg:h-60 object-cover rounded-2xl"
                                 />
                             </div>
@@ -86,7 +93,7 @@ export default function Projects() {
                                         rel="noopener noreferrer"
                                         className=" w-full sm:w-auto text-center bg-[#0f2747] hover:bg-[#15335d] px-6 py-3 rounded-full border border-slate-600"
                                     >
-                                        <i class="fa-solid fa-eye"></i> Visit Site 
+                                        <i class="fa-solid fa-eye"></i> Visit Site
                                     </a>
 
                                 </div>

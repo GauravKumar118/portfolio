@@ -42,6 +42,13 @@ export default function Projects() {
             image: "/project/flyward.png",
             description: "A modern aviation finance platform that helps airlines, lessors, financiers, and investors analyze aircraft maintenance costs, forecast cash flows, evaluate transactions, and make data-driven financial decisions through an intuitive and responsive interface.",
             live: "https://www.flyward.com/",
+        },
+        {
+            id: 6,
+            title: "iPhone Landing Page",
+            image: "/project/iphone.png",
+            description: "An immersive Apple-inspired iPhone landing page built with React, Three.js, GSAP, and Tailwind CSS. Features smooth scroll-based animations, interactive 3D product visualization, responsive layouts, and modern UI transitions for a premium user experience.",
+            live: "https://iphone-olive-ten.vercel.app/",
         }
     ];
     return (

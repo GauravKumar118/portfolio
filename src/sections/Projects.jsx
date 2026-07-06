@@ -49,6 +49,13 @@ export default function Projects() {
             image: "/project/iphone.png",
             description: "An immersive Apple-inspired iPhone landing page built with React, Three.js, GSAP, and Tailwind CSS. Features smooth scroll-based animations, interactive 3D product visualization, responsive layouts, and modern UI transitions for a premium user experience.",
             live: "https://iphone-olive-ten.vercel.app/",
+        },
+        {
+            id: 7, 
+            title: "MacBook Pro Landing Page",
+            image: "/project/macbook.png",
+            description: "An immersive, premium Apple-inspired MacBook Pro showcase landing page. Built using React, Three.js (React Three Fiber), and GSAP for ultra-smooth scroll-driven camera movements, cinematic zoom transitions, and fully interactive 3D model interaction integrated with a clean Tailwind CSS layout.",
+            live: "https://macbook-blue.vercel.app/", 
         }
     ];
     return (

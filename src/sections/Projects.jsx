@@ -41,7 +41,7 @@ export default function Projects() {
             title: "Flyward",
             image: "/project/flyward.png",
             description: "A modern aviation finance platform that helps airlines, lessors, financiers, and investors analyze aircraft maintenance costs, forecast cash flows, evaluate transactions, and make data-driven financial decisions through an intuitive and responsive interface.",
-            live: "https://www.flyward.com/",
+            live: "https://flyward.vercel.app/",
         },
         {
             id: 6,

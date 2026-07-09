@@ -79,7 +79,7 @@ export default function Footer() {
 
                     <div className=" w-22  border border-violet-500/20 rounded-2xl p-1 text-center hover:border-violet-500 ">
                         <a
-                            href="https://www.linkedin.com/in/gaurav-saini-a28117289/"
+                            href="https://www.linkedin.com/in/gaurav-kumar-a28117289"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-4xl"><i class="fa-brands fa-linkedin-in"></i>
@@ -96,13 +96,16 @@ export default function Footer() {
                         </a>
 
                     </div>
-                    <div className="w-22  border border-violet-500/20 rounded-2xl p-1 text-center hover:border-violet-500 overflow-hidden">
+                    <div className="w-22 border border-violet-500/20 rounded-2xl p-1 text-center hover:border-violet-500 overflow-hidden">
                         <a
-                            href="https://www.instagram.com/gaurav__dev/"
-                            className="text-4xl"><i class="fa-brands fa-instagram"></i>
-                            <h2 className="mt-1 text-xl">IG</h2>
+                            href="/gaurav.resume.pdf" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-4xl"
+                        >
+                            <i className="fa-regular fa-file-lines"></i>
+                            <h2 className="mt-1 text-xl">Resume</h2>
                         </a>
-
                     </div>
 
                 </div>
@@ -119,8 +122,7 @@ export default function Footer() {
 
                     <div>
                         <h3 className="text-[22px] font-semibold font-serif">
-                            © 2026 Gaurav Saini
-                        </h3>
+                            © 2026 Gaurav Kumar                        </h3>
                         <p className="text-gray-400  ">
                             All Rights Reserved.
                         </p>

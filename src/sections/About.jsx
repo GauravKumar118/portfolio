@@ -177,7 +177,7 @@ export default function About() {
                 <canvas ref={canvasRef} />
 
                 <div className="absolute top-20 left-5    w-[85%] sm:w-[80%] md:w-[70%] lg:w-[70%]   overflow-hidden ">
-                    <p className="text-5xl   md:text-5xl lg:text-7xl">Hi I'm<span className=" ml-1 text-violet-500"><b>Gaurav Saini</b></span> </p>
+                    <p className="text-5xl   md:text-5xl lg:text-7xl">Hi I'm<span className=" ml-1 text-violet-500"><b>Gaurav</b></span> </p>
                     <p className=" text-sm md:text-base lg:text-lg  font-sans ">I build fast, responsive, and visually engaging web applications.From powerful MERN Stack backends to interactive Three.js scenes and smooth GSAP animations, I love turning ideas into digital experiences.</p>
 
                 </div>

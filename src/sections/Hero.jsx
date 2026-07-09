@@ -332,7 +332,7 @@ export default function Hero() {
             <canvas ref={canvasRef} />
 
             <div className="absolute top-10 sm-top-0  md:top-0 lg:top-0    pointer-events-none  overflow-hidden justify-items-center ">
-                <h1 className="text-4xl lg:text-6xl font-serif ">GAURAV <span className="text-violet-600/80">SAINI</span></h1>
+                <h1 className="text-4xl lg:text-6xl font-serif ">GAURAV</h1>
                 <p>Creative Full Stack & 3D Web Developer</p>
 
 

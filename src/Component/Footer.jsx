@@ -68,7 +68,7 @@ export default function Footer() {
 
                     <div className="w-22 border border-violet-500/20 rounded-2xl p-1 text-center hover:border-violet-500 ">
                         <a
-                            href="https://github.com/gauravsaini13"
+                            href="https://github.com/GauravKumar118"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-4xl"><i class="fa-brands fa-github"></i>

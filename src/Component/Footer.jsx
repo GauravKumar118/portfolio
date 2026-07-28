@@ -98,7 +98,7 @@ export default function Footer() {
                     </div>
                     <div className="w-22 border border-violet-500/20 rounded-2xl p-1 text-center hover:border-violet-500 overflow-hidden">
                         <a
-                            href="/gauravkumar.pdf" 
+                            href="/Gaurav.pdf" 
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-4xl"
